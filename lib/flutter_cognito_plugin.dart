@@ -107,13 +107,16 @@ class Cognito {
     // https://github.com/aws-amplify/aws-sdk-android/issues/873
     await invokeMethod("initialize");
 
-    var userState = await Cognito.getCurrentUserState();
-
-    if (userState == UserState.SIGNED_OUT_FEDERATED_TOKENS_INVALID ||
-        userState == UserState.SIGNED_OUT_USER_POOLS_TOKENS_INVALID) {
-      await Cognito.signOut();
-      return await Cognito.getCurrentUserState();
-    }
+    // logic below has been moved up into celltrak_sd app in order to make it work
+    // for hosted ui mode too
+    //
+    //var userState = await Cognito.getCurrentUserState();
+    //
+    //if (userState == UserState.SIGNED_OUT_FEDERATED_TOKENS_INVALID ||
+    //    userState == UserState.SIGNED_OUT_USER_POOLS_TOKENS_INVALID) {
+    //  await Cognito.signOut();
+    //  return await Cognito.getCurrentUserState();
+    //}
 
     return await Cognito.getCurrentUserState();
   }
