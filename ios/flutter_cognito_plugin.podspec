@@ -15,16 +15,15 @@ A new flutter plugin project.
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
-  s.platform = :ios, '9.0'
+  s.platform = :ios, '11.0'
 
   # Flutter.framework does not contain a i386 slice. Only x86_64 simulators are supported.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }
   s.swift_version = '5.0'
 
   s.dependency 'plugin_scaffold'
-  s.dependency 'AWSMobileClient', '~> 2.18.1'
-  s.dependency 'AWSAuth', '~> 2.18.1'
-  s.dependency 'AWSCognito', '~> 2.18.1'
-  s.dependency 'AWSAuthUI', '~> 2.18.1'
-  s.dependency 'AWSUserPoolsSignIn', '~> 2.18.1'
+  s.dependency 'AWSMobileClient', '~> 2.22.2'
+  s.dependency 'AWSAuth', '~> 2.22.2'
+  s.dependency 'AWSAuthUI', '~> 2.22.2'
+  s.dependency 'AWSUserPoolsSignIn', '~> 2.22.2'
 end

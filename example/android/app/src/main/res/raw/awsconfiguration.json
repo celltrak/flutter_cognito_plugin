@@ -1,0 +1,23 @@
+{
+  "IdentityManager": {
+    "Default": {}
+  },
+  "CognitoUserPool": {
+    "Default": {
+      "PoolId": "us-east-1_Vu6ccYQri",
+      "AppClientId": "s1ldupjg52rk4vrrumab75nq0",
+      "Region": "us-east-1"
+    }
+  },
+  "Auth": {
+    "Default": {
+      "OAuth": {
+        "WebDomain": "celltrakmobiletest2.auth.us-east-1.amazoncognito.com",
+        "AppClientId": "s1ldupjg52rk4vrrumab75nq0",
+        "SignInRedirectURI": "celltraksd://celltraksd.ctt.com/authmain",
+        "SignOutRedirectURI": "celltraksd://celltraksd.ctt.com/authmain",
+        "Scopes": ["openid", "email", "phone", "profile", "aws.cognito.signin.user.admin"]
+      }
+    }
+  }
+}
